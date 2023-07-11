@@ -111,7 +111,7 @@ class BitPage extends StatelessWidget {
 
     return Scaffold(
 
-      appBar: AppBar(title: Text('Page1')),
+      appBar: AppBar(title: Text('Rate_Page')),
         
       body: Center(
         child: 
@@ -126,39 +126,31 @@ class BitPage extends StatelessWidget {
 }
 
 
-
-
-
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home')),
-
-
-
-       body: Center(
-        child: 
-            const Text(
-              'Go to main        ',style: TextStyle(color: Colors.white),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            FloatingActionButton(
+              child: const Icon(Icons.airplanemode_on),
+              onPressed: (){
+                Navigator.of(context).pushNamed('/page2');
+              },
+              tooltip: 'Main',
             ),
+            const SizedBox(height: 16), // Добавьте отступ между кнопкой и текстом
+            const Text(
+              'Go to main',
+              style: TextStyle(color: Colors.white),
+            ),
+          ],
         ),
-
-
-
-
-      floatingActionButton: Center(
-      child: FloatingActionButton(
-        child: const Icon(Icons.airplanemode_on),
-        onPressed:(){
-           Navigator.of(context).pushNamed('/page2');
-        } ,
-        tooltip: 'Main',
-      ),
       ),
     );
   }
 }
-
