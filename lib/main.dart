@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pr1/repositories/views/rate.dart';
-import 'package:flutter_pr1/repositories/views/home_page.dart';
-import 'package:flutter_pr1/repositories/views/aftermain_page.dart';
 import 'package:flutter_pr1/repositories/services/routes.dart';
 
 void main() {
@@ -19,11 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: Colors.black,
       ),
-      routes: {
-        '/':(context) => HomePage(),
-        '/page2':(context) => MyHomePage(),
-        '/page1bit':(context) => BitPage(),
-      },
+      routes: routes,
     );
   }
 }

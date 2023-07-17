@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 class HomePage extends StatelessWidget {
   const HomePage({Key? key});
 
@@ -13,11 +11,11 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             FloatingActionButton(
-              child: const Icon(Icons.airplanemode_on),
               onPressed: (){
                 Navigator.of(context).pushNamed('/page2');
               },
               tooltip: 'Main',
+              child: const Icon(Icons.airplanemode_on),
             ),
             const SizedBox(height: 16), // Добавьте отступ между кнопкой и текстом
             const Text(
