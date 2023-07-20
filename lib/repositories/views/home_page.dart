@@ -12,7 +12,7 @@ class HomePage extends StatelessWidget {
           children: <Widget>[
             FloatingActionButton(
               onPressed: (){
-                Navigator.of(context).pushNamed('/page2');
+                Navigator.of(context).pushNamed('/registrationpage');
               },
               tooltip: 'Main',
               child: const Icon(Icons.airplanemode_on),
